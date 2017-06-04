@@ -1,0 +1,19 @@
+Onyx development image
+=========================
+
+This image provides a quick getting-started to Onyx.  This is a Raspian
+Jessie Lite image with Onyx pre-installed and configured to operate with:
+  * Headphones or speaker plugged into the Pi's headphone jack
+  * USB microphone
+
+If you wish audio to go out the HDMI -- e.g. if you have your Pi plugged in
+to a TV and you want to use its speaker -- you can edit the auto_run.sh
+script and follow the instructions give there.
+
+If you wish to use Wifi instead of an ethernet connection, you can run the
+configure_wifi.sh script.  This will start the Onyx wifi setup process.
+You only need to do this once, and it begins automatically on boot if no
+network is detected.
+
+Onyx will automatically check for updates daily and will also check for
+updates on each reboot.
