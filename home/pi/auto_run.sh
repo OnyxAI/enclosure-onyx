@@ -77,6 +77,12 @@ then
 
    fi
 
+   sudo onyx start
+   sleep 2
+   sudo start wifi &
+   sleep 5
+
+
 
 
 

@@ -91,6 +91,7 @@ fi
 alias ll='ls -l'
 #alias la='ls -A'
 #alias l='ls -CF'
+alias sudo='sudo env PATH=$PATH'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
