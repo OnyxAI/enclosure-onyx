@@ -115,6 +115,7 @@ fi
 #########################################################################
 # This initializes Onyx
 #########################################################################
-export PYTHONPATH=${PYTHONPATH}:${HOME}/onyx
+export PYTHONPATH=${PYTHONPATH}:${HOME}/Onyx
+export PYTHONPATH=${PYTHONPATH}:${HOME}/Onyx/venv/lib/python2.7/site-packages
 
 source ~/auto_run.sh

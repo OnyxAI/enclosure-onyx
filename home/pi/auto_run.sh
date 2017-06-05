@@ -65,14 +65,12 @@ then
          then
             # Versions don't match...update needed
             echo "Updating Onyx scripts!"
-            speak "Updating Onyx, please hold on."
             wget -N https://raw.githubusercontent.com/OnyxProject/enclosure-onyx/master/home/pi/update.sh
             source update.sh
             cp /tmp/version ~/version
 
             # restart
             echo "Rebooting now"
-            speak "Update complete, restarting."
             sudo reboot now
          fi
       fi
@@ -95,7 +93,6 @@ then
 
       echo "Internet connection detected!"
       echo "Restarting..."
-      speak "Restarting now."
       sudo reboot now
    fi
 
