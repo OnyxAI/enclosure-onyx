@@ -90,6 +90,7 @@ then
    if ! ping -q -c 1 -W 1 google.com >/dev/null 2>&1
    then
       echo "Internet connection not detected, starting WIFI setup process..."
+      sudo service nginx stop
       source configure_wifi.sh &
       # Wait for an internet connection -- either the user finished Wifi Setup or
       # plugged in a network cable.
