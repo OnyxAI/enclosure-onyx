@@ -82,10 +82,6 @@ then
    sudo start wifi &
    sleep 5
 
-
-
-
-
    # check to see if the unit is connected to the internet.
    if ! ping -q -c 1 -W 1 google.com >/dev/null 2>&1
    then
