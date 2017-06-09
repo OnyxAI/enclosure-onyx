@@ -1,7 +1,7 @@
 #!/bin/bash
 CURRENT_VERSION=$(curl -s 'https://raw.githubusercontent.com/OnyxProject/Onyx/master/version.json' | jq -r '.version')
 
-ONYX_FOLDER="/home/aituglo/Dev/Onyx"
+ONYX_FOLDER="/home/pi/Onyx"
 
 ONYX_VERSION=$(cat $ONYX_FOLDER/version.json | jq -r '.version')
 
