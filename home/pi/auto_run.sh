@@ -80,14 +80,14 @@ then
    sudo onyx start
    sleep 2
    sudo start wifi &
-   sleep 5
+   sleep 10
 
    # check to see if the unit is connected to the internet.
    if ! ping -q -c 1 -W 1 google.com >/dev/null 2>&1
    then
       echo "Internet connection not detected, starting WIFI setup process..."
       sudo service nginx stop
-      source configure_wifi.sh &
+      sudo bash configure_wifi.sh &
       # Wait for an internet connection -- either the user finished Wifi Setup or
       # plugged in a network cable.
       while ! ping -q -c 1 -W 1 8.8.8.8 >/dev/null 2>&1 ; do
@@ -118,3 +118,6 @@ echo "***********************************************************************"
 echo ""
 echo ""
 sleep 2
+
+view_log client
+view_log voice
