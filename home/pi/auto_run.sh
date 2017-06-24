@@ -119,5 +119,5 @@ echo ""
 echo ""
 sleep 2
 
-view_log client
-view_log voice
+view_log client &
+view_log voice &
