@@ -11,11 +11,7 @@ export PATH="$HOME/bin:$PATH"
 
 echo ""
 echo "***********************************************************************"
-echo "** Onyx development image, ver" $(<version)
-echo "***********************************************************************"
-echo "This image is designed to make getting started with Onyx easy.  It"
-echo "is pre-configured for a Raspberry Pi that has a speaker or headphones"
-echo "plugged in to the Pi's headphone jack, and a USB microphone."
+echo "** Onyx  image, ver" $(<version)
 echo "***********************************************************************"
 
 if [ "$SSH_CLIENT" == "" ]
@@ -77,6 +73,13 @@ then
 
    fi
 
+   # Upgrade Onyx Core if connected to the internet and one is available
+   ping -q -c 1 -W 1 google.com >/dev/null 2>&1
+   if [ $? -eq 0 ]
+   then
+      bash should_update.sh
+   fi
+
    sudo onyx start
    sleep 2
    sudo start wifi &
@@ -108,7 +111,7 @@ fi
 sleep 2
 echo ""
 echo "***********************************************************************"
-echo "In a few moments you will see the contents of the speech log.  Hit"
+echo "In a few moments you will see the contents of the log.  Hit"
 echo "Ctrl+C to stop showing the log and return to the command line.  You will"
 echo "still be able to speak to Onyx after that, only the display of the"
 echo "log will cease.  To see the live log again, type:"
@@ -120,4 +123,3 @@ echo ""
 sleep 2
 
 view_log client &
-view_log voice &
