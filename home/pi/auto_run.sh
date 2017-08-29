@@ -80,6 +80,8 @@ then
       bash should_update.sh
    fi
 
+   sudo service mongod start
+
    sudo onyx start
    sleep 2
    sudo start wifi &
