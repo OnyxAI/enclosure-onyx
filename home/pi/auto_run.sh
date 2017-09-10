@@ -80,7 +80,7 @@ then
       bash should_update.sh
    fi
 
-   sudo service mongod start
+   sudo service mongodb start
 
    sudo onyx start
    sleep 2
