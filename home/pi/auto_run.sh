@@ -73,13 +73,6 @@ then
 
    fi
 
-   # Upgrade Onyx Core if connected to the internet and one is available
-   ping -q -c 1 -W 1 google.com >/dev/null 2>&1
-   if [ $? -eq 0 ]
-   then
-      bash should_update.sh
-   fi
-
    sudo service mongodb start
 
    sudo onyx start
