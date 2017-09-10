@@ -49,7 +49,7 @@ testvercomp () {
         echo "NOT UPDATE REQUIRED"
     else
         echo "UPDATE REQUIRED"
-        bash rpi-update.sh
+        bash update-onyx.sh
     fi
 }
 

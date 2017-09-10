@@ -10,7 +10,7 @@ wget -N https://raw.githubusercontent.com/OnyxProject/enclosure-onyx/master/home
 wget -N https://raw.githubusercontent.com/OnyxProject/enclosure-onyx/master/home/pi/auto_run.sh
 wget -N https://raw.githubusercontent.com/OnyxProject/enclosure-onyx/master/home/pi/configure_wifi.sh
 wget -N https://raw.githubusercontent.com/OnyxProject/enclosure-onyx/master/home/pi/messagebus_emit.py
-wget -N https://raw.githubusercontent.com/OnyxProject/enclosure-onyx/master/home/pi/rpi-update.sh
+wget -N https://raw.githubusercontent.com/OnyxProject/enclosure-onyx/master/home/pi/update-onyx.sh
 wget -N https://raw.githubusercontent.com/OnyxProject/enclosure-onyx/master/home/pi/should-update.sh
 
 cd ~/bin
