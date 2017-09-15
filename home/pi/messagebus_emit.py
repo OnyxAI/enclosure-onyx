@@ -1,6 +1,6 @@
 import sys
 import os
-sys.path.append("/home/pi/onyx")
+sys.path.append("/home/pi/Onyx")
 from onyx.messagebus.client.ws import WebsocketClient
 from onyx.messagebus.message import Message
 

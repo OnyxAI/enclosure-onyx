@@ -1,4 +1,5 @@
 #!/bin/bash
+
 export PATH="$HOME/bin:$PATH"
 
 function validate_url(){
