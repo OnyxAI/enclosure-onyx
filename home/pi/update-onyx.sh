@@ -5,7 +5,7 @@ export PATH="$HOME/bin:$PATH"
 function validate_url(){
   if [[ `wget -S --spider $1  2>&1 | grep 'HTTP/1.1 200 OK'` ]];
   then
-    wget http://downloads.sourceforge.net/project/onyxproject/onyx-build/onyx-v$ONYX_VERSION-Linux-armv6l.tar.gz
+    wget https://github.com/OnyxProject/Onyx/releases/download/$ONYX_VERSION/onyx-v$ONYX_VERSION-Linux-armv6l.tar.gz
   else
     echo "FILE NOT EXIST"
     echo "EXIT"
@@ -18,7 +18,7 @@ ONYX_FOLDER="/home/pi/Onyx"
 TMP_DB="/tmp/onyx_db"
 TMP_DATA="/tmp/onyx_data"
 
-validate_url http://downloads.sourceforge.net/project/onyxproject/onyx-build/onyx-v$ONYX_VERSION-Linux-armv6l.tar.gz
+validate_url https://github.com/OnyxProject/Onyx/releases/download/$ONYX_VERSION/onyx-v$ONYX_VERSION-Linux-armv6l.tar.gz
 
 # stop onyx
 onyx stop
