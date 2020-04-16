@@ -1,0 +1,3 @@
+#!/bin/bash
+
+bash /home/pi/onyx/start.sh "$@"

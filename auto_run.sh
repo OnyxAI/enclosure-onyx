@@ -48,7 +48,7 @@ then
    then
       echo "Checking for updates to Onyx environment"
       cd /tmp
-      wget -N https://raw.githubusercontent.com/OnyxProject/enclosure-onyx/master/home/pi/version
+      wget -N https://raw.githubusercontent.com/OnyxAI/enclosure-onyx/master/version
       if [ $? -eq 0 ]
       then
          if [ ! -f ~/version ]
@@ -61,7 +61,7 @@ then
          then
             # Versions don't match...update needed
             echo "Updating Onyx scripts!"
-            wget -N https://raw.githubusercontent.com/OnyxProject/enclosure-onyx/master/home/pi/update.sh
+            wget -N https://raw.githubusercontent.com/OnyxAI/enclosure-onyx/master/update.sh
             source update.sh
             cp /tmp/version ~/version
 
@@ -73,12 +73,8 @@ then
 
    fi
 
-   sudo service mongodb start
-
    sudo onyx start
    sleep 2
-   sudo start wifi &
-   sleep 10
 
    # check to see if the unit is connected to the internet.
    if ! ping -q -c 1 -W 1 google.com >/dev/null 2>&1
@@ -117,4 +113,4 @@ echo ""
 echo ""
 sleep 2
 
-view_log client &
+view_log web &

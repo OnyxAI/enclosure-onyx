@@ -1,8 +1,7 @@
 #!/bin/bash
-TOP="/home/pi/Onyx"
+TOP="/home/pi/onyx"
 
-source ${TOP}/venv/bin/activate
-PYTHONPATH=${TOP} ${TOP}/venv/bin/python messagebus_emit.py onyx.wifi.start &
+sudo wifi-connect &
 
 echo "====================================================================="
 echo "Wifi setup has begun.  Use your phone, tablet or laptop to connect to"
